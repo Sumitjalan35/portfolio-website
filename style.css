@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +44,7 @@ body {
   padding: 0 2rem;
 }
 
-/* Loading Screen */
+
 .loading-screen {
   position: fixed;
   top: 0;
@@ -101,7 +101,7 @@ body {
   50% { opacity: 0.5; }
 }
 
-/* Navigation */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -184,7 +184,7 @@ body {
   transition: 0.3s;
 }
 
-/* Hero Section */
+
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, #181c2b 60%, #23243a 100%);
@@ -362,7 +362,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .hero-profile-card.tilt:hover, .hero-profile-card.crazy-wow:hover {
-  /* Remove transform and box-shadow on hover for static card */
+
   transform: none;
   box-shadow: 0 16px 64px 0 rgba(99,102,241,0.28), 0 4px 16px 0 rgba(99,102,241,0.13);
   z-index: 2;
@@ -518,7 +518,7 @@ body {
   }
 }
 
-/* Animation Keyframes */
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -552,7 +552,7 @@ body {
   }
 }
 
-/* Section Styles */
+
 section {
   padding: 5rem 0;
 }
@@ -579,7 +579,7 @@ section {
   margin: 0 auto;
 }
 
-/* About Section */
+
 .about {
   background: var(--bg-secondary);
 }
@@ -635,7 +635,7 @@ section {
   font-size: 1.25rem;
 }
 
-/* Flip Card */
+
 .about-card {
   perspective: 1000px;
 }
@@ -695,7 +695,7 @@ section {
   font-size: 1.1rem;
 }
 
-/* Skills Section */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -803,7 +803,7 @@ section {
   transform: scaleX(1);
 }
 
-/* Projects Section */
+
 .projects {
   background: var(--bg-secondary);
 }
@@ -919,7 +919,7 @@ section {
   font-weight: 500;
 }
 
-/* Experience Section */
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -1015,7 +1015,7 @@ section {
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
-/* Contact Section */
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1207,7 +1207,7 @@ section {
   margin-left: 0.3em;
 }
 
-/* Footer */
+
 .footer {
   background: var(--bg-dark);
   color: white;
@@ -1238,7 +1238,7 @@ section {
   gap: 1rem;
 }
 
-/* --- Social Link Button UI Enhancement (force override) --- */
+
 .social-link {
   width: 48px !important;
   height: 48px !important;
@@ -1312,7 +1312,7 @@ section {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Back to Top Button */
+
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -1342,7 +1342,7 @@ section {
   box-shadow: var(--shadow-xl);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -1452,12 +1452,12 @@ section {
   }
 }
 
-/* Smooth Scrolling */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -1475,7 +1475,7 @@ html {
   background: var(--secondary-color);
 }
 
-/* --- Centered About Section Redesign --- */
+
 .about-centered {
   position: relative;
   background: var(--bg-secondary);
@@ -1717,7 +1717,7 @@ html {
   }
 }
 
-/* --- Education Section --- */
+
 .edu-section {
   background: var(--bg-secondary);
   padding: 5rem 0 3rem 0;
@@ -1839,7 +1839,7 @@ html {
   letter-spacing: 0.02em;
 }
 
-/* --- Experience Section --- */
+
 .exp-section {
   background: var(--bg-secondary);
   padding: 5rem 0 3rem 0;
@@ -1931,7 +1931,7 @@ html {
   letter-spacing: 0.02em;
 }
 
-/* --- Clubs & Activities Section --- */
+
 .clubs-section {
   background: var(--bg-secondary);
   padding: 5rem 0 3rem 0;
@@ -2052,7 +2052,7 @@ html {
   }
 }
 
-/* --- Skills & Technologies Glow Accent --- */
+
 .skills-section {
   position: relative;
   z-index: 1;
@@ -2082,7 +2082,7 @@ html {
   z-index: 2;
 }
 
-/* --- Enhanced Clubs Flip Card Glow & Flip Animation --- */
+
 .flip-card {
   perspective: 1400px;
   cursor: pointer;
@@ -2168,12 +2168,12 @@ html {
   }
 }
 
-/* --- Contact Info Cards Glow --- */
+
 .contact-info-card, .contact-info-card:hover, .contact-info-card i, .contact-info-card .info-label, .contact-info-card .info-value {
   all: unset;
 }
 
-/* --- Centralize and Glow Section Headings --- */
+
 .edu-header, .exp-header, .clubs-header {
   justify-content: center;
   text-align: center;
@@ -2225,7 +2225,7 @@ html {
   }
 }
 
-/* --- Scroll-triggered Content Animations --- */
+
 .fade-in-up {
   opacity: 0;
   transform: translateY(40px);
@@ -2263,7 +2263,7 @@ html {
   transform: scale(1);
 }
 
-/* --- HERO SECTION ENHANCEMENTS --- */
+
 .gradient-text {
   background: linear-gradient(90deg, #a18fff 10%, #43e9fe 90%);
   -webkit-background-clip: text;
@@ -2290,7 +2290,7 @@ html {
   opacity: 1;
 }
 
-/* Floating Blobs */
+
 .floating-blob {
   position: absolute;
   border-radius: 50%;
@@ -2323,7 +2323,7 @@ html {
   100% { transform: translateY(-40px) scale(1.1); }
 }
 
-/* Animated CTA Buttons */
+
 .cta-btn {
   background: linear-gradient(90deg, #43e9fe, #a18fff);
   color: #fff;
@@ -2349,14 +2349,14 @@ html {
   background: linear-gradient(90deg, #a18fff, #43e9fe);
 }
 
-/* Profile Card Accessibility Focus */
+
 .hero-profile-card:focus {
   outline: 2.5px solid #43e9fe;
   outline-offset: 3px;
   box-shadow: 0 0 0 6px #43e9fe33;
 }
 
-/* Responsive Blobs */
+
 @media (max-width: 900px) {
   .floating-blob {
     opacity: 0.13;
