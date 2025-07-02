@@ -1,13 +1,13 @@
 console.log("Welcome to my portfolio!");
 
-// Professional Portfolio Website JavaScript
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("🚀 Professional portfolio website loaded successfully!");
 
-  // Loading Screen
+
   const loadingScreen = document.querySelector(".loading-screen");
 
-  // Hide loading screen after page loads
+
   window.addEventListener("load", function () {
     setTimeout(() => {
       loadingScreen.classList.add("hidden");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1500);
   });
 
-  // Mobile Navigation Toggle
+
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("active");
   });
 
-  // Close mobile menu when clicking on a link
+ 
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       hamburger.classList.remove("active");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Smooth scrolling for navigation links
+
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Navbar background change on scroll
+
   const navbar = document.querySelector(".navbar");
   window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Active navigation link highlighting
+ 
   const sections = document.querySelectorAll("section[id]");
   window.addEventListener("scroll", function () {
     let current = "";
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Scroll animations with Intersection Observer
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -99,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  // Observe elements for animation
+  
   const animateElements = document.querySelectorAll(
     ".skill-category, .project-card, .timeline-item, .contact-item"
   );
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 
-  // Skill progress bars animation
+  
   const skillItems = document.querySelectorAll(".skill-item");
   skillItems.forEach((item) => {
     item.addEventListener("mouseenter", function () {
@@ -118,13 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.transform = "translateX(0) scale(1)";
     });
 
-    // Add click functionality
+
     item.addEventListener("click", function () {
       const skillName = this.getAttribute("data-skill");
       const skillLevel = this.getAttribute("data-level");
       showNotification(`Skill: ${skillName} - Level: ${skillLevel}%`, "info");
 
-      // Add a brief highlight effect
+   
       this.style.transform = "scale(1.1)";
       setTimeout(() => {
         this.style.transform = "scale(1)";
@@ -132,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Project cards functionality
+
   const projectCards = document.querySelectorAll(".project-card");
   projectCards.forEach((card) => {
     card.addEventListener("mouseenter", function () {
@@ -144,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // About highlight items functionality
+  
   const highlightItems = document.querySelectorAll(".highlight-item");
   highlightItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -153,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Contact items functionality
+
   const contactItems = document.querySelectorAll(".contact-item");
   contactItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -175,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Contact form handling
+
   const contactForm = document.querySelector("#contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -186,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const subject = this.querySelector('input[placeholder="Subject"]').value;
       const message = this.querySelector("textarea").value;
 
-      // Validation
+      
       if (!name || !email || !subject || !message) {
         showNotification("Please fill in all fields", "error");
         return;
@@ -197,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Simulate form submission
+     
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.querySelector("span").textContent;
       submitBtn.querySelector("span").textContent = "Sending...";
@@ -215,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Counter animation for stats
+
   const statNumbers = document.querySelectorAll(".hero-stat-number");
   const animateCounter = (element, target) => {
     let current = 0;
@@ -230,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 50);
   };
 
-  // Trigger counter animation when stats section is visible
+
   const statsObserver = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -248,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statsObserver.observe(heroStats);
   }
 
-  // Back to top button
+  
   const backToTopBtn = document.querySelector(".back-to-top");
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
@@ -258,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Cursor trail effect
+ 
   let cursorTrail = [];
   const maxTrailLength = 20;
 
@@ -287,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Fade out trail dots
+
     cursorTrail.forEach((trailDot, index) => {
       const opacity = (index / cursorTrail.length) * 0.5;
       trailDot.style.opacity = opacity;
@@ -297,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Typing animation for hero title
+
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
     const text = heroTitle.textContent;
@@ -315,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(typeWriter, 2000);
   }
 
-  // Parallax effect for hero section
+  
   window.addEventListener("scroll", function () {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector(".hero");
@@ -325,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add CSS for notification styles
+
   const notificationStyles = document.createElement("style");
   notificationStyles.textContent = `
         .notification-content {
@@ -363,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   document.head.appendChild(notificationStyles);
 
-  // Initialize tooltips for skill items
+
   skillItems.forEach((item) => {
     const skillName = item.getAttribute("data-skill");
     const skillLevel = item.getAttribute("data-level");
@@ -372,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Performance optimization: Throttle scroll events
+ 
   function throttle(func, limit) {
     let inThrottle;
     return function () {
@@ -386,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // Apply throttling to scroll events
+
   const throttledScrollHandler = throttle(function () {
     if (window.scrollY > 100) {
       navbar.style.background = "rgba(10, 10, 10, 0.98)";
@@ -401,8 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("✨ All JavaScript functionality initialized successfully!");
 
-  // --- Hero Section Upgrades ---
-  // Animated grid background
+
   window.addEventListener("DOMContentLoaded", () => {
     const gridCanvas = document.getElementById("heroGridBg");
     if (gridCanvas) {
@@ -438,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function () {
       animateGrid();
     }
 
-    // Floating particles
+
     const particlesDiv = document.querySelector(".hero-particles");
     if (particlesDiv) {
       for (let i = 0; i < 18; i++) {
@@ -451,7 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Animated counters
+    
     document.querySelectorAll(".hero-stat-num").forEach((el) => {
       const target = +el.getAttribute("data-count");
       let count = 0;
@@ -465,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function () {
       update();
     });
 
-    // 3D tilt/parallax on profile card
+    
     const tiltCard = document.querySelector(".hero-profile-card.tilt");
     if (tiltCard) {
       tiltCard.addEventListener("mousemove", (e) => {
@@ -483,7 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Button ripple effect
+
     document.querySelectorAll(".btn.ripple").forEach((btn) => {
       btn.addEventListener("click", function (e) {
         const ripple = document.createElement("span");
@@ -496,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // --- Crazy Hero Card Interactive Particles ---
+
   window.addEventListener("DOMContentLoaded", () => {
     const card = document.querySelector(".hero-profile-card.crazy-wow");
     const particlesContainer = document.querySelector(
@@ -504,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     const holoImg = document.querySelector(".profile-card-holo-img");
     if (card && particlesContainer && holoImg) {
-      // Floating orbs
+   
       for (let i = 0; i < 8; i++) {
         const orb = document.createElement("div");
         orb.className = "crazy-particle";
@@ -517,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function () {
         orb.style.animationDuration = 2.5 + Math.random() * 2.5 + "s";
         particlesContainer.appendChild(orb);
       }
-      // Burst on hover/move
+     
       card.addEventListener("mousemove", (e) => {
         const rect = holoImg.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -536,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
           p.style.opacity = 0.8;
           p.style.transform = `translate(-50%, -50%)`;
           particlesContainer.appendChild(p);
-          // Animate outward
+     
           setTimeout(() => {
             p.style.transition = "all 1s cubic-bezier(.77,0,.18,1)";
             const dist = 60 + Math.random() * 40;
@@ -554,7 +552,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // --- HERO SECTION ENHANCEMENTS ---
+
   window.addEventListener("DOMContentLoaded", () => {
     // Typewriter effect for subtitle
     const typewriter = document.getElementById("heroTypewriter");
@@ -573,10 +571,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(type, 600);
     }
 
-    // Animate floating blobs (handled by CSS, but can randomize position if desired)
-    // Already handled by CSS keyframes for now
-
-    // Animated counters for hero stats
+  
     document.querySelectorAll(".hero-stat-num").forEach((el) => {
       const target = +el.getAttribute("data-count");
       let count = 0;
@@ -590,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
       update();
     });
 
-    // Button microinteractions (ripple already present, add 3D effect)
+
     document.querySelectorAll(".cta-btn").forEach((btn) => {
       btn.addEventListener("mousedown", () => {
         btn.style.transform = "scale(0.97)";
@@ -604,7 +599,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Typewriter animation for README.md (about-journey-text)
+
   const journeyText = document.querySelector(".about-journey-text");
   if (journeyText) {
     const fullText = `I'm a full stack developer driven by curiosity and a deep love for building things that matter. From sleek user interfaces to resilient backend systems, I enjoy bridging the gap between design and functionality. My journey is rooted in realworld projects, late-night debugging marathons, and an eagerness to learn beyond the classroom. I don't just code I solve problems, optimize performance, and craft experiences that users enjoy. Whether it's contributing to open source or collaborating on team projects, I'm always seeking ways to grow, give back, and push the limits of what the web can do.`;
@@ -617,11 +612,11 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(typeJourney, 13);
       }
     }
-    setTimeout(typeJourney, 900); // Delay to start after code block
+    setTimeout(typeJourney, 900); 
   }
 });
 
-// Global functions
+
 function scrollToSection(sectionId) {
   const section = document.querySelector(`#${sectionId}`);
   if (section) {
@@ -679,7 +674,7 @@ function showNotification(message, type = "info") {
         </div>
     `;
 
-  // Add styles
+
   const colors = {
     success: "#10b981",
     error: "#ef4444",
@@ -705,12 +700,12 @@ function showNotification(message, type = "info") {
 
   document.body.appendChild(notification);
 
-  // Animate in
+
   setTimeout(() => {
     notification.style.transform = "translateX(0)";
   }, 100);
 
-  // Close button functionality
+
   const closeBtn = notification.querySelector(".notification-close");
   closeBtn.addEventListener("click", () => {
     notification.style.transform = "translateX(100%)";
@@ -721,7 +716,7 @@ function showNotification(message, type = "info") {
     }, 300);
   });
 
-  // Auto remove after 5 seconds
+
   setTimeout(() => {
     if (document.body.contains(notification)) {
       notification.style.transform = "translateX(100%)";
@@ -734,7 +729,7 @@ function showNotification(message, type = "info") {
   }, 5000);
 }
 
-// --- About Section Interactivity ---
+
 function copyAboutCode() {
   const codeBlock = document.getElementById("aboutCodeBlock");
   if (!codeBlock) return;
@@ -752,14 +747,14 @@ function copyAboutCode() {
   });
 }
 
-// --- About Code Block Typewriter Animation ---
+
 window.addEventListener("DOMContentLoaded", () => {
   const codeBlock = document.querySelector("#aboutCodeBlock code");
   if (codeBlock) {
     const originalHTML = `<span class="code-key">const</span> <span class="code-var">developer</span> <span class="code-eq">=</span> <span class="code-brace">&#123;</span>\n  <span class="code-prop styled-prop">name</span>: <span class="code-str link-str">\"Sumit Jalan\"</span>,\n  <span class="code-prop styled-prop">role</span>: <span class="code-str link-str">\"Full Stack Developer\"</span>,\n  <span class="code-prop styled-prop">location</span>: <span class="code-str link-str">\"Lucknow, India\"</span>,\n  <span class="code-prop styled-prop">degree</span>: <span class="code-str link-str">\"B.Tech Computer Science\"</span>,\n  <span class="code-prop styled-prop">experience</span>: <span class="code-str link-str">\"2+ Years\"</span>,\n  <span class="code-prop styled-prop">skills</span>: [\n    <span class="code-str">\"React\"</span>, <span class="code-str">\"Node.js\"</span>, <span class="code-str">\"TypeScript\"</span>,\n    <span class="code-str">\"MongoDB\"</span>, <span class="code-str">\"Express.js\"</span>, <span class="code-str">\"AWS\"</span>,\n    <span class="code-str">\"Tailwind CSS\"</span>, <span class="code-str">\"PostgreSQL\"</span>, <span class="code-str">\"Docker\"</span>, <span class="code-str">\"Git\"</span>, <span class="code-str">\"REST APIs\"</span>, <span class="code-str">\"C\"</span>, <span class="code-str">\"C++\"</span>\n  ],\n  <span class="code-prop styled-prop">passion</span>: <span class="code-str link-str">\"Building modern web apps with intuitive UI & scalable backend\"</span>,\n  <span class="code-prop styled-prop">status</span>: <span class="code-str link-str">\"Available\"</span>,\n  <span class="code-prop styled-prop">portfolio</span>: <span class="code-str link-str">\"https://sumitjalan.dev\"</span>,\n  <span class="code-prop styled-prop">github</span>: <span class="code-str link-str">\"https://github.com/Sumitjalan35\"</span>,\n  <span class="code-prop styled-prop">linkedin</span>: <span class="code-str link-str">\"https://linkedin.com/in/sumitjalan\"</span>,\n  <span class="code-prop styled-prop">email</span>: <span class="code-str link-str">\"sumitjalan@example.com\"</span>,\n  <span class="code-prop styled-prop">languages</span>: [<span class="code-str">\"English\"</span>, <span class="code-str">\"Hindi\"</span>],\n  <span class="code-prop styled-prop">interests</span>: [<span class="code-str">\"Open Source\"</span>, <span class="code-str">\"UI/UX Design\"</span>, <span class="code-str">\"AI Integration\"</span>],\n  <span class="code-prop styled-prop">currentlyLearning</span>: [<span class="code-str">\"Backend Development\"</span>, <span class="code-str">\"Next.js\"</span>, <span class="code-str">\"Prisma\"</span>],\n  <span class="code-prop styled-prop">projectsCount</span>: <span class="code-str">\"5+\"</span>,\n  <span class="code-prop styled-prop">motto</span>: <span class="code-str">\"Code. Create. Collaborate.\"</span>\n<span class="code-brace">&#125;</span>`;
     codeBlock.innerHTML = "";
     let i = 0;
-    // Split HTML by character, but preserve tags
+
     const chars = [];
     let tag = false,
       charBuffer = "";
@@ -807,12 +802,12 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-    // Add style for .styled-prop
+   
     const style = document.createElement('style');
     style.textContent = `.styled-prop { font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; font-weight: 900; color: #a18fff; letter-spacing: 0.03em; font-size: 1.08em; background: linear-gradient(90deg,#43e9fe22 0%,#a18fff22 100%); border-radius: 4px; padding: 0 0.2em; }`;
     document.head.appendChild(style);
   }
-  // Animate About stats counter
+ 
   const aboutStats = document.querySelectorAll(".about-stat-number");
   aboutStats.forEach((stat) => {
     const target = parseInt(stat.getAttribute("data-target"));
